@@ -1,0 +1,22 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    ens18:
+      addresses:
+      - 10.0.1.4/23
+      gateway4: 10.0.0.1
+      nameservers:
+        addresses:
+        - 10.0.0.1
+        search:
+        - mylilserver.net
+    ens19:
+      dhcp4: false 
+      dhcp6: false 
+  version: 2
+
+  bridges:
+    br0:  
+      interfaces: [ens19]
+      dhcp4: no
+      dhcp6: no
