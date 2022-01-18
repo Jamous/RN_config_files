@@ -1,0 +1,15 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    ens18:
+      dhcp4: true
+    ens19:
+      dhcp4: false 
+      dhcp6: false 
+  version: 2
+
+  bridges:
+    br0:  
+      interfaces: [ens19]
+      dhcp4: no
+      dhcp6: no
